@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nilamjohor Bookname Selection</title>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+        body {
+            background: linear-gradient(to right, #e7e7e7, #b3b3b3);
+            line-height: 150%;
+        }
+
+        * { 
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .title-1 {
+            font-size: 35px;
+        }
+
+        button {
+            border: none;
+            font-family: Montserrat, sans-serif;
+            text-decoration: none;
+            font-size: 50px;
+            background-color: white;
+            border-radius: 7px;
+            font-weight: 600;
+            width: 500px;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .button-sec {
+            align-items: center;
+            justify-content: center;
+            margin: 2px 3px;
+        }
+
+        .app {
+            align-items: center;
+            justify-content: center;
+        }
+
+        #snackbar {
+            visibility: hidden;
+            min-width: 250px;
+            margin-left: -125px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+            font-size: 17px;
+        }
+
+        #snackbar.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+
+        @-webkit-keyframes fadein {
+            from {bottom: 0; opacity: 0;} 
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @-webkit-keyframes fadeout {
+            from {bottom: 30px; opacity: 1;} 
+            to {bottom: 0; opacity: 0;}
+        }
+
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+
+        .btn-ins-a:hover {
+            transform: translateY(-10px);
+        }
+
+        .btn-ins-a {
+            transition: .2s ease-in-out;
+        }
+    </style>
+
+    <div class="app">
+        <center>
+            <div class="section">
+                <h1 class="title-1">Nilamjohor Book Language Selection</h1>
+                <div class="button-sec">
+                    <button class="btn-ins-a" id="btn-ins-alk"><a href="" class="btn-bm-slc" id="btn-bm-slclk">Bahasa Melayu</a></button>
+                    <br><br><br><br>
+                    <button class="btn-ins-a" id="btn-ins-alk"><a href="" class="btn-bm-slc" id="btn-bm-slclk">Bahasa Inggeris</a></button>
+                    <br><br><br><br>
+                    <button class="btn-ins-a" id="btn-ins-alk"><a href="" class="btn-bm-slc" id="btn-bm-slclk">Bahasa Cina</a></button>
+                    <p>Hover the text or click the text to work.</p>
+                    <p>v2.5.0 - Changed Font</p>
+                    <p>Create by Anthony Loh</p>
+                    
+                    <div id="snackbar">Not avalible now! (ALKHin)</div>
+                </div>
+                <div class="hint-sec">
+
+                </div>
+            </div>
+        </center>
+    </div>
+
+    <script>
+        function snackbar() {
+          var x = document.getElementById("snackbar");
+          x.className = "show";
+          setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+    </script>
+</body>
+</html>
